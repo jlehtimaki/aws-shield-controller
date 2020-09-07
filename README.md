@@ -1,2 +1,2 @@
-# aws-shield-operator
-Operator to enable AWS Shield on your NLB
+# aws-shield-controller
+Controller to enable AWS Shield on your NLB
