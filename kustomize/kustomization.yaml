@@ -1,0 +1,11 @@
+resources:
+- clusterrole.yaml
+- serviceaccount.yaml
+- clusterrolebinding.yaml
+- deployment.yaml
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+images:
+- name: lehtux/aws-shield-controller
+  newName: lehtux/test-repo
+  newTag: v0.0.52
