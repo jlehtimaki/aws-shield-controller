@@ -1,7 +1,5 @@
 # aws-shield-controller
 
-`Note! This is early alpha`
-
 Operator to enable AWS Shield on your NLB/ELB/ALB automatically.
 
 # Prerequisites
