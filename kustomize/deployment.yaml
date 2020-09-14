@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: aws-shield-controller
+  namespace: kube-system
+  labels:
+    app: aws-shield-controller
+spec:
+  selector:
+    matchLabels:
+      app: aws-shield-controller
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: aws-shield-controller
+    spec:
+      containers:
+        - args:
+            - --interval=5m
+          image: lehtux/aws-shield-controller
+          name: aws-shield-controller
+          resources:
+            limits:
+              cpu: 200m
+              memory: 50Mi
+            requests:
+              cpu: 100m
+              memory: 20Mi
+          env:
+            - name: AWS_REGION
+              value: eu-west-1
+      terminationGracePeriodSeconds: 10
+      serviceAccountName: aws-shield-controller
+      securityContext:
+        fsGroup: 65534
