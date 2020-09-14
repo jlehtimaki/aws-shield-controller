@@ -7,5 +7,5 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 images:
 - name: lehtux/aws-shield-controller
-  newName: lehtux/test-repo
-  newTag: v0.0.52
+  newName: lehtux/aws-shield-controller
+  newTag: v0.0.1
