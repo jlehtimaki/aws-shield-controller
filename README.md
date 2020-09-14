@@ -1,6 +1,6 @@
 # aws-shield-controller
 
-Operator to enable AWS Shield on your NLB/ELB/ALB automatically.
+Operator to enable AWS Shield on your NLB/CLB/ALB automatically.
 
 # Prerequisites
 aws-shield-controller requires certain AWS permissions to run:
